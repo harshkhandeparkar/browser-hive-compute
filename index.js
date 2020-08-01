@@ -6,7 +6,6 @@ class WSocket extends WebSocket {
   }
 
   on(event, handler) {
-    console.log(event, handler, this)
     switch (event) {
       case 'open':
         return this.onopen(handler);

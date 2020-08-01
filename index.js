@@ -8,13 +8,13 @@ class WSocket extends WebSocket {
   on(event, handler) {
     switch (event) {
       case 'open':
-        return this.onopen(handler);
+        return this.onopen = handler;
       case 'error':
-        return this.onerror(handler);
+        return this.onerror = handler;
       case 'message':
-        return this.onmessage(handler);
+        return this.onmessage = handler;
       case 'close':
-        return this.onclose(handler);
+        return this.onclose = handler;
     }
   }
 }

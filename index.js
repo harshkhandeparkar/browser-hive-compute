@@ -1,10 +1,6 @@
 const { runHelper } = require('gpujs-hive-compute/dist/util/runHelper');
 
 class WSocket extends WebSocket {
-  constructor(...args) {
-    super(...args);
-  }
-
   on(event, handler) {
     switch (event) {
       case 'open':

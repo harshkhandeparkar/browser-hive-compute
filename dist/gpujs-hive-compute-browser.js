@@ -151,10 +151,6 @@
 	const { runHelper } = runHelper_1;
 
 	class WSocket extends WebSocket {
-	  constructor(...args) {
-	    super(...args);
-	  }
-
 	  on(event, handler) {
 	    switch (event) {
 	      case 'open':

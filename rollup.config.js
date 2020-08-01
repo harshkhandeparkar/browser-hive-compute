@@ -23,7 +23,7 @@ module.exports = [
 		input: 'index.js',
 		output: {
 			name: 'GPUjsHiveCompute',
-			file: 'dist/gpujs-hive-hive-compute.min.js',
+			file: 'dist/gpujs-hive-compute-browser.min.js',
 			format: 'umd'
 		},
 		plugins: [

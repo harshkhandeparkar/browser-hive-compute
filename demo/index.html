@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPUjs Hive Compute</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./materialize.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper blue accent-4">
+      <a href="#" class="brand-logo center">GPUjs Hive Compute</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="https://github.com/gpujs-hive-compute">Github</a></li>
+        <li><a href="https://gpu.rocks">GPU.js</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <p>
+      <a href="https://github.com/HarshKhandeparkar/gpujs-hive-compute">GPUjs Hive Compute</a> is a javascript library that
+      allows the use of <a href="https://gpu.rocks">GPU.js</a> on multiple different devices in parallel!
+    </p>
+
+    <form id="url-form">
+      <div class="row">
+        <div class="col s8">
+          <input type="text" id="url-input" placeholder="Enter URL">
+        </div>
+        <div class="col s4">
+          <button class="btn blue accent-4" id="url-submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="logs invisible">
+    <ul class="list">
+
+    </ul>
+  </div>
+  
+  <script src="./gpu-browser.min.js"></script>
+  <script src="../dist/gpujs-hive-compute-browser.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

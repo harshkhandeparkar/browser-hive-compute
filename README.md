@@ -32,7 +32,7 @@ hiveHelp(
 )
 ```
 
-See the example in `demo/`.
+See the example in `demo/`. You can also directly use the `demo/index.html` to run in a browser, if you want a simple UI.
 
 ### Caveats
 - `runHive` cannot run in a browser since it needs to start a *server*.

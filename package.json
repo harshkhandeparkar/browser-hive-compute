@@ -1,6 +1,6 @@
 {
   "name": "browser-hive-compute",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Browser Compatitibility layer for gpujs-hive-compute",
   "main": "index.js",
   "repository": "https://github.com/HarshKhandeparkar/browser-hive-compute.git",
@@ -8,12 +8,11 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "gpujs-hive-compute": "0.4.1"
+    "gpujs-hive-compute": "0.5.0"
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c rollup.config.dev.js -w",
-    "npm-publish": "yarn build && git add dist && yarn publish"
+    "dev": "rollup -c rollup.config.dev.js -w"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",

@@ -25,11 +25,11 @@ Read the `hiveHelp` docs [here](https://github.com/gpujs-hive-compute).
 ```js
 const gpu = new GPU();
 
-hiveHelp(
+hiveHelp({
   gpu,
   url,
   logFunction // Same as gpujs-hive-compute, read the docs.
-)
+})
 ```
 
 See the example in `demo/`. You can also directly use the `demo/index.html` to run in a browser, if you want a simple UI.

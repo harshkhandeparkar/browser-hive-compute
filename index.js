@@ -1,4 +1,5 @@
 const { runHelper } = require('gpujs-hive-compute/dist/util/runHelper');
+const { hiveHelpDefaults } = require('gpujs-hive-compute/dist/helper');
 
 class WSocket extends WebSocket {
   on(event, handler) {
@@ -15,7 +16,13 @@ class WSocket extends WebSocket {
   }
 }
 
-function hiveHelp(gpu, url, logFunction = console.log) {
+function hiveHelp(options) {
+  options = {
+    hiveHelpDefaults,
+    ...options
+  }
+  const { gpu, url, logFunction } = options;
+
   runHelper(WSocket, gpu, url, logFunction);
 }
 

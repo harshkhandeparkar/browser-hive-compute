@@ -7,6 +7,7 @@ module.exports = [
   // browser-friendly UMD build
 	{
 		input: 'index.js',
+		external: ['ws'],
 		output: {
 			name: 'GPUjsHiveCompute',
 			file: 'dist/gpujs-hive-compute-browser.js',
@@ -21,6 +22,7 @@ module.exports = [
 	// Minified Build
 	{
 		input: 'index.js',
+		external: ['ws'],
 		output: {
 			name: 'GPUjsHiveCompute',
 			file: 'dist/gpujs-hive-compute-browser.min.js',

@@ -10,7 +10,11 @@ document.querySelector('#url-form').addEventListener('submit', e => {
   const url = document.querySelector('#url-input').value;
   
   try {
-    GPUjsHiveCompute.hiveHelp(gpu, url, customLog);
+    GPUjsHiveCompute.hiveHelp({
+      gpu,
+      url,
+      logFunction: customLog
+    })
     document.querySelector('#url-form').classList.add('invisible');
     document.querySelector('#logs').classList.remove('invisible');
   }

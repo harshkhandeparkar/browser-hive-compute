@@ -2,7 +2,9 @@ const gpu = new GPU();
 const logList = document.querySelector('#logs ul');
 
 const customLog = (...logs) => {
-  logList.append(`<li><b>${new Date().toTimeString()}</b>: ${logs}</li>`);
+  const li = document.createElement('li');
+  li.innerHTML = `<li><b>${new Date().toTimeString()}</b>: ${JSON.stringify(logs)}</li>`;
+  logList.append(li);
 }
 
 document.querySelector('#url-form').addEventListener('submit', e => {

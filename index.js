@@ -2,16 +2,42 @@ const { runHelper } = require('gpujs-hive-compute/dist/util/runHelper');
 const { hiveHelpDefaults } = require('gpujs-hive-compute/dist/helper');
 
 class WSocket extends WebSocket {
+  openHandlers = [];
+  errHandlers = [];
+  messageHandlers = [];
+  closeHandlers = [];
+
+  constructor(...opts) {
+    super(...opts);
+
+    this.onopen = (...opts) => {
+      this.openHandlers.forEach(handler => handler(...opts));
+    }
+    this.onerror = (...opts) => {
+      this.errHandlers.forEach(handler => handler(...opts));
+    }
+    this.onmessage = (...opts) => {
+      this.messageHandlers.forEach(handler => handler(...opts));
+    }
+    this.onclose = (...opts) => {
+      this.closeHandlers.forEach(handler => handler(...opts));
+    }
+  }
+
   on(event, handler) {
     switch (event) {
       case 'open':
-        return this.onopen = handler;
+        this.openHandlers.push(handler);
+        break;
       case 'error':
-        return this.onerror = handler;
+        this.errHandlers.push(handler);
+        break;
       case 'message':
-        return this.onmessage = handler;
+        this.messageHandlers.push(handler);
+        break;
       case 'close':
-        return this.onclose = handler;
+        this.closeHandlers.push(handler);
+        break;
     }
   }
 }

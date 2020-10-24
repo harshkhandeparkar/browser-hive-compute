@@ -197,17 +197,17 @@
 	  constructor(...opts) {
 	    super(...opts);
 
-	    this.onopen = (...opts) => {
-	      this.openHandlers.forEach(handler => handler(...opts));
+	    this.onopen = ({ data }) => {
+	      this.openHandlers.forEach(handler => handler(data));
 	    };
-	    this.onerror = (...opts) => {
-	      this.errHandlers.forEach(handler => handler(...opts));
+	    this.onerror = ({ data }) => {
+	      this.errHandlers.forEach(handler => handler(data));
 	    };
-	    this.onmessage = (...opts) => {
-	      this.messageHandlers.forEach(handler => handler(...opts));
+	    this.onmessage = ({ data }) => {
+	      this.messageHandlers.forEach(handler => handler(data));
 	    };
-	    this.onclose = (...opts) => {
-	      this.closeHandlers.forEach(handler => handler(...opts));
+	    this.onclose = ({ data }) => {
+	      this.closeHandlers.forEach(handler => handler(data));
 	    };
 	  }
 

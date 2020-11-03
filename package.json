@@ -1,6 +1,6 @@
 {
   "name": "browser-hive-compute",
-  "version": "0.5.0-rev.3",
+  "version": "0.6.0",
   "description": "Browser Compatitibility layer for gpujs-hive-compute",
   "main": "index.js",
   "repository": "https://github.com/HarshKhandeparkar/browser-hive-compute.git",

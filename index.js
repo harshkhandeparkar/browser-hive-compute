@@ -42,14 +42,14 @@ class WSocket extends WebSocket {
   }
 }
 
-function hiveHelp(options) {
+async function hiveHelp(options) {
   options = {
     hiveHelpDefaults,
     ...options
   }
   const { gpu, url, logFunction } = options;
 
-  runHelper(WSocket, gpu, url, logFunction);
+  return await runHelper(WSocket, gpu, url, logFunction);
 }
 
 module.exports = {

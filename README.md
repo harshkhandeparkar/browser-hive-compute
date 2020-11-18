@@ -7,7 +7,7 @@ A compatibility layer for using [gpujs-hive-compute](https://github.com/HarshKha
 - [License](LICENSE)
 
 ### Usage
-You can get the latest dist files in the [releases page](https://github.com/HarshKhandeparkar/browser-hive-compute). The release version corresponds to the release version of the main library.
+You can get the latest dist files in the [releases page](https://github.com/HarshKhandeparkar/browser-hive-compute/releases). The release version corresponds to the release version of the main library.
 You also need to include [gpu.js](https://github.com/gpujs/gpu.js) dist separately.
 
 Include the dist files in HTML, at the end of the body.
